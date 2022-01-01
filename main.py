@@ -13,3 +13,9 @@ tsecond = turtle.Turtle("arrow")
 tsecond.shapesize(0.2, 16)
 tsecond.color("orange")
 second_angle = 90
+
+#creating Turtle object and setting it's property for minute ---> I used arrow
+tminute = turtle.Turtle("arrow")
+tminute.shapesize(0.3, 12)
+tminute.color("grey")
+minute_angle = 90
