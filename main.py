@@ -19,8 +19,17 @@ tminute = turtle.Turtle("arrow")
 tminute.shapesize(0.3, 12)
 tminute.color("grey")
 minute_angle = 90
+
 #creating Turtle object and setting it's property for hour ---> I used arrow
 thour = turtle.Turtle("arrow")
 thour.shapesize(0.55, 9)
 thour.color("black")
 hour_angle = 90
+
+DELAY = 990 # to be used later (time in milli-second)
+
+def screen(): # function to set up our screen and alter it
+    sc = turtle.Screen()
+    img = "bg.png"
+    sc.title("CLOCK")
+    sc.bgcolor("orange")
