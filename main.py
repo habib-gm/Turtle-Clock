@@ -33,3 +33,30 @@ def screen(): # function to set up our screen and alter it
     img = "bg.png"
     sc.title("CLOCK")
     sc.bgcolor("orange")
+
+def clock_dashes_and_dots(): #function to create small dashs and dots in our clock
+
+    #creating turtle object and setting it's property for dashs and dots
+    tcircle = turtle.Turtle()
+    tcircle.speed(0)
+    tcircle.pensize(3)
+    tcircle.hideturtle()
+
+    for i in range(1, 61):
+        tcircle.penup()
+        tcircle.goto(0, 0)
+        tcircle.rt(6)
+        if bool(i%5): #Create dots in clock (i%5 =>  since we need to create 12 dashes)
+            tcircle.fd(211)
+            tcircle.pendown()
+            tcircle.dot(8,"black")
+        else: #create dashes in clock (if i is divisible by five)
+            if i == 15 or i== 30 or i== 45 or i== 60: # making dashes at 12, 3, 6 and 9 diffrent color and pensize
+                tcircle.pensize(5)
+                tcircle.color("orange")
+            tcircle.fd(195)
+            tcircle.pendown()
+            tcircle.fd(25)
+
+            tcircle.pensize(3) #setting back properties altered in above if statement
+            tcircle.color("black")
